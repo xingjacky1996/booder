@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <style>
+        main{
+            width: 800px;
+            height: auto;
+            border: 3px solid #6ab8;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        span{
+            width: 800px;
+            height: 50px;
+            text-align: center;
+            color: blue;
+            display: block;
+            font-size: 25px;
+            line-height: 50px;
+            box-sizing: border-box;
+            border-bottom: 3px solid #303131;
+        }
+        ul{
+            box-sizing: border-box;
+            width: 100%;
+            height:auto;
+            font-size: 35px;
+            border-bottom: 3px solid #2ab;
+            list-style: none;
+        }
+        input{
+            width: 100%;
+            height: 400px;
+            box-sizing: border-box;
+            border: none;
+            font-size: 45px;
+            border-bottom: 3px solid #b15;
+            outline:medium
+        }
+    </style>
+</head>
+<body>
+<main>
+    <span>留言板</span>
+    <ul><li></li></ul>
+    <input type="text">
+</main>
+</body>
+</html>
+<script>
+    let input=document.querySelector("input");
+    let ul = document.querySelector("ul");
+    input.onclick=function () {
+
+        let li = ul.firstChild.cloneNode();
+        li.innerText = input.value;
+        ul.appendChild(li);
+        input.value = "";
+    }
+    function add(){
+
+    }
+</script>
